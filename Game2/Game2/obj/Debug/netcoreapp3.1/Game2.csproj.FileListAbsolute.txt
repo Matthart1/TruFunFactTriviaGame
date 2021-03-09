@@ -1,0 +1,13 @@
+C:\Users\mphar\Desktop\repos\VideoTriviaGame2\Game2\Game2\bin\Debug\netcoreapp3.1\Game2.exe
+C:\Users\mphar\Desktop\repos\VideoTriviaGame2\Game2\Game2\bin\Debug\netcoreapp3.1\Game2.deps.json
+C:\Users\mphar\Desktop\repos\VideoTriviaGame2\Game2\Game2\bin\Debug\netcoreapp3.1\Game2.runtimeconfig.json
+C:\Users\mphar\Desktop\repos\VideoTriviaGame2\Game2\Game2\bin\Debug\netcoreapp3.1\Game2.runtimeconfig.dev.json
+C:\Users\mphar\Desktop\repos\VideoTriviaGame2\Game2\Game2\bin\Debug\netcoreapp3.1\Game2.dll
+C:\Users\mphar\Desktop\repos\VideoTriviaGame2\Game2\Game2\bin\Debug\netcoreapp3.1\Game2.pdb
+C:\Users\mphar\Desktop\repos\VideoTriviaGame2\Game2\Game2\obj\Debug\netcoreapp3.1\Game2.csprojAssemblyReference.cache
+C:\Users\mphar\Desktop\repos\VideoTriviaGame2\Game2\Game2\obj\Debug\netcoreapp3.1\Game2.AssemblyInfoInputs.cache
+C:\Users\mphar\Desktop\repos\VideoTriviaGame2\Game2\Game2\obj\Debug\netcoreapp3.1\Game2.AssemblyInfo.cs
+C:\Users\mphar\Desktop\repos\VideoTriviaGame2\Game2\Game2\obj\Debug\netcoreapp3.1\Game2.csproj.CoreCompileInputs.cache
+C:\Users\mphar\Desktop\repos\VideoTriviaGame2\Game2\Game2\obj\Debug\netcoreapp3.1\Game2.dll
+C:\Users\mphar\Desktop\repos\VideoTriviaGame2\Game2\Game2\obj\Debug\netcoreapp3.1\Game2.pdb
+C:\Users\mphar\Desktop\repos\VideoTriviaGame2\Game2\Game2\obj\Debug\netcoreapp3.1\Game2.genruntimeconfig.cache
