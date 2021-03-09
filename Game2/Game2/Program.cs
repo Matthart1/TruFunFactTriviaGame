@@ -8,30 +8,33 @@ namespace Game2
         {
             //Console.WriteLine("Hello World!");
 
+            //If you are reading this code, know that is was writen intentinally. i know it is not best practice but was done to use differing elements and formating.
+            //sorry if it becomes hard to read but there are hopefully plenty of notes to help you understand what or why something is what it is.
+
             Console.WriteLine("Well hey there friend! Would you like to play a little game? Yes or No? fyi, we are case sensitive here ;)");
             var yesOrNo = Console.ReadLine();
             if (yesOrNo == "Yes")
             {
                 Console.WriteLine("Hell Yeah!! Lets get started!");
-                questionOne();
-                questionTwo();
-                questionThree();
-                questionFour();
-                questionFive();
-                questionSix();
-                questionSeven();
-                questionEight();
-                theEnd();
+                QuestionTwo();
+                QuestionOne();          //Note that questionOne and questionTwo are not in order. Simply to show you can call out of order, or not at all. 
+                QuestionThree();
+                QuestionFour();
+                QuestionFive();
+                QuestionSix();          //Everything is called in the order its needed in the main method. Thats all that goes in there.
+                QuestionSeven();        //Everything else goes into separate methods and is referenced at its turn
+                QuestionEight();
+                TheEnd();               //The game runs because the questions are inside the 'Yes' responce
             }
             else if (yesOrNo == "No")
             {
-                no();
+                no();           //'no();' method is called for a negative responce and skips the questions. I.E. Game is over
             }
             else
             {
-                no();
+                no();           //Or for no/incorrect responce in this case
             }
-            static void questionOne()
+            static void QuestionOne()
             {
                 Console.WriteLine("What was the original color of oranges?");
                 var answer1 = Console.ReadLine();
@@ -44,10 +47,10 @@ namespace Game2
                     Console.WriteLine("Sorry, maybe you'll get the next one!");
                 }
             }
-            static void questionTwo()
+            static void QuestionTwo()           //Method name is Pascal Casing. Remember.
             {
                 Console.WriteLine("There is one letter that isnt used in any US state name, can you guess it?");
-                var answer2 = Console.ReadLine();
+                var answer2 = Console.ReadLine();   //'answer2' variable is Camel Casing. Remember.
                 if (answer2 == "Q")
                 {
                     Console.WriteLine("Thats right!");
@@ -57,7 +60,7 @@ namespace Game2
                     Console.WriteLine("Sorry, try another one.");
                 }
             }
-            static void questionThree()
+            static void QuestionThree()
             {
                 Console.WriteLine("The country of Scotland has 421 words for what item?");
                 var answer3 = Console.ReadLine();
@@ -70,7 +73,7 @@ namespace Game2
                     Console.WriteLine("Good guess! Yet sadly no. :/");
                 }
             }
-            static void questionFour()
+            static void QuestionFour()
             {
                 Console.WriteLine("Fun fact: Peanuts are not nuts! So what are they?" +
                     " A:Peas" +
@@ -100,7 +103,7 @@ namespace Game2
                     }
                 } while (win == false);
             }
-            static void questionFive()
+            static void QuestionFive()
             {
                 Console.WriteLine("Most US presidents have had a collection of pets but Teddy Roosevelt had" +
                         " one of the most notable. What pet did he keep? A:Tiger B:Shark C:Hyena");
@@ -128,11 +131,11 @@ namespace Game2
 
                 } while (win == false);
             }
-            static void questionSix()
+            static void QuestionSix()
             {
                 Console.WriteLine("So like most large businesses, the CIA has a starbucks in the building. Whats " +
                     "different about this one? A:Its been the location of two assasinations. " +
-                    "B:They dont write names on the cups." +
+                    "B:They dont write names on the cups." +                        // I need to figure out how to type a paragraph in console
                     " C:You need a secret password to get in. ");
                 bool win = false;
                 do
@@ -157,13 +160,13 @@ namespace Game2
                     }
                 } while (win == false);
             }
-            static void questionSeven()
+            static void QuestionSeven()
             {
                 Console.WriteLine("How much was the original script of 'Terminator' sold for? A: &10,000 B: $100,000 C: $1");
                 bool correct = true;
                 do
                 {
-                    var question7 = Console.ReadLine();
+                    var question7 = Console.ReadLine();             // this was just a little 'switch case' practice, i know its not necessary.
 
                     switch (question7)
                     {
@@ -183,20 +186,20 @@ namespace Game2
                     }
                 } while (correct == true);
             }
-            static void questionEight()
+            static void QuestionEight()
             {
                 Console.WriteLine("How long can a giraffe tongue get in inches?");
                 bool correct = false;
                 do
                 {
-                    var answer8 =int.Parse(Console.ReadLine());
+                    var answer8 =int.Parse(Console.ReadLine());          // This was a test to see if a statement would overlap or stop where another takes over. It stopped.
                     if (answer8 >= 21)
                     {
                         Console.WriteLine("Go down some!");
                     }
                     else if (answer8 <= 5)
                     {
-                        Console.WriteLine("Way off! Up.");
+                        Console.WriteLine("Way off! Up.");              //Made to use an extended if statement
                     }
                     else if (answer8 <= 10)
                     {
@@ -215,15 +218,19 @@ namespace Game2
                         Console.WriteLine("Spot on!!");
                         correct = true;
                     }
+                    else       //Not nes but sure looks good
+                    {
+                        Console.WriteLine("Was that even a real answer?");
+                    }
                 } while (correct == false);
             }
-            static void theEnd()
+            static void TheEnd()
             {
                 Console.WriteLine("So did you like the game?");
                 bool game = true;
                 do
                 {
-                    var answer7 = Console.ReadLine();
+                    var answer7 = Console.ReadLine();       // Only repeats as long as an invalid responce is applied 
                     if (answer7 == "Yes")
                     {
                         Console.WriteLine("Awesome!! Happy you enjoyed it!");
@@ -239,9 +246,9 @@ namespace Game2
                         Console.WriteLine("Sorry, i did catch that.");
                     }
                     Console.ReadLine();
-                } while (game == true);
+                } while (game == true);         //Think of the bool as more of a password to leave out of the loop. the natural value of true/false doesnt matter. just a place holder
             }
-            static void no()
+            static void no()            // Stands alone until called by a negative statement in the opening question, may never be called... hopefully.
             {
                 Console.WriteLine("Well i guess we dont have to play rigth now.");
 
